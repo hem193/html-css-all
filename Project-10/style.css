@@ -1,0 +1,363 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  color: white;
+}
+
+body {
+  background-image: url("./image/retro-living-room-interior-design.jpg");
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+nav {
+  margin: 50px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav > div > h1 {
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+.nav-right {
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+.nav-right > ul {
+  display: flex;
+  list-style-type: none;
+  width: 45rem;
+  justify-content: space-between;
+  font-size: large;
+  font-weight: bold;
+  margin-right: 95px;
+}
+.nav-right > ul > li {
+  cursor: pointer;
+}
+.nav-right > div {
+  cursor: pointer;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.nav-right > div > img {
+  width: 2rem;
+}
+.nav-right::after {
+  content: "";
+  position: absolute;
+  background-color: white;
+  display: block;
+  height: 2px;
+  width: 100%;
+  bottom: -29px;
+  border-radius: 30px;
+}
+
+/* container */
+.container {
+  position: relative;
+  margin: 82px 61px;
+  position: relative;
+}
+.container > div > h1 {
+  font-size: 5rem;
+  font-weight: bolder;
+  font-family: "Roboto Condensed", sans-serif;
+}
+.container > div > button {
+  background: transparent;
+  width: 13rem;
+  height: 3rem;
+  border: solid 3px;
+  border-radius: 27px;
+  font-size: 1.2rem;
+  margin: 3rem 0;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.container > div > button:hover {
+  border: none;
+  background-color: white;
+  color: black;
+  font-weight: bold;
+}
+
+.puzle,
+.light {
+  position: absolute;
+  width: 18rem;
+  height: 10rem;
+  backdrop-filter: blur(5px);
+  background-color: #ffffff0f;
+}
+
+.puzle {
+  top: 0;
+  left: 70%;
+}
+
+.light {
+  left: 40%;
+  bottom: -40%;
+}
+
+.light > div > img,
+.puzle > div > img {
+  width: 1.7rem;
+}
+
+.puzle > div:nth-child(1),
+.light > div:nth-child(1) {
+  height: 2rem;
+  background-color: white;
+  width: 4rem;
+  border-radius: 26px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1.5rem 1.2rem;
+  position: relative;
+}
+
+.puzle > h4,
+.light > h4 {
+  width: 15rem;
+  margin: 0 auto;
+}
+
+.puzle > div > i .light > div > i {
+  color: black;
+}
+
+.extra {
+  position: absolute;
+  height: 4rem;
+  width: 1.5px;
+  background: white;
+  /* rotate: 90deg; */
+  bottom: -33px;
+  left: 12rem;
+  top: 10rem;
+}
+
+.extra::before {
+  content: "";
+  width: 1rem;
+  height: 1rem;
+  display: block;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  left: -7px;
+  top: 56px;
+}
+
+.light-extra {
+  position: absolute;
+  width: 4rem;
+  height: 1.5px;
+  background: white;
+  left: 18rem;
+}
+.light-extra::after {
+  content: "";
+  width: 1rem;
+  height: 1rem;
+  display: block;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  left: 62px;
+  top: -7px;
+}
+
+/* hamburger menu */
+
+.hamburger-menu::before {
+  position: absolute;
+  content: "";
+  background: white;
+  width: 1.5rem;
+  height: 3px;
+  border-radius: 20px;
+  bottom: 6px;
+  transition: all 0.3s ease;
+}
+
+.hamburger-menu {
+  display: none;
+  background: white;
+  width: 24px;
+  height: 3px;
+  border-radius: 20px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.hamburger-menu::after {
+  position: absolute;
+  content: "";
+  background: white;
+  width: 1.5rem;
+  height: 3px;
+  border-radius: 20px;
+  top: 6px;
+  transition: all 0.3s ease;
+}
+
+.cross-menu::before {
+  bottom: 0px;
+  transform: rotate(45deg);
+  transition: all 0.3s ease;
+}
+
+.cross-menu {
+  background: transparent;
+}
+
+.cross-menu::after {
+  transition: all 0.3s ease;
+  top: 0px;
+  transform: rotate(-45deg);
+}
+
+@media (max-width: 500px) {
+
+
+
+/* hide-scroll" */
+.hide-scroll{
+overflow: hidden;
+}
+
+
+  nav {
+    margin: 25px 35px;
+  }
+
+  nav div:nth-child(1) > h1 {
+    font-size: 20px;
+  }
+
+  .nav-right {
+    display: none;
+  }
+  .buttoncontainer {
+    height: 2rem;
+    width: 2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hamburger-menu {
+    display: block;
+  }
+
+  /* sidebar menu */
+
+  .close {
+    display: block;
+  }
+
+  .nav-right:after {
+    display: none;
+  }
+
+  .nav-right {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    margin-top: 6rem;
+    /* background-image: linear-gradient(#082942, #21506f); */
+    width: 100%;
+  z-index: 2;
+
+
+  background-image: url("./image/retro-living-room-interior-design.jpg");
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+  
+
+  .nav-right > ul {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    line-height: 3;
+    margin: 3rem 0;
+  }
+
+
+.nav-right > div{
+ width: 100%;
+ display: flex;
+ justify-content: center;
+ flex-direction: column;
+ gap: 1rem;
+}
+
+.nav-right > div >div h3:nth-child(1){
+display: none;
+}
+
+
+  /*container  */
+
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+  .container > div > h1 {
+    text-align: center;
+
+  }
+  .container > div:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .puzle,
+  .light {
+    position: unset;
+    margin: 3rem 0;
+  }
+
+  .light-extra::after {
+    content: "";
+    width: 1rem;
+    height: 1rem;
+    display: block;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    left: -7px;
+    top: -7px;
+  }
+  .light-extra {
+    position: absolute;
+    width: 1.5px;
+    height: 4rem;
+    background: white;
+    left: 15rem;
+    top: -4rem;
+  }
+}

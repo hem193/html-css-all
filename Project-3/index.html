@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Red Rose Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Red+Rose:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Dela Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Project-3</title>
+  </head>
+  <body>
+    <div class="container">
+      <section aria-label="navbar">
+        <nav class="navbar">
+          <div>
+            <img src="./assets/white-logo.png" alt="logo" class="logo" />
+          </div>
+          <div class="list-group close">
+            <ul class="list">
+              <li class="list-item">Our Menu</li>
+              <li class="list-item">Maps</li>
+              <li class="list-item">About</li>
+              <li class="list-item">Contact</li>
+            </ul>
+          </div>
+          <div class="button-group">
+            <img class="cart" src="./assets/cart.svg" alt="" />
+            <div class="hamburger-menu"></div>
+            <button class="button-small">Order</button>
+          </div>
+        </nav>
+      </section>
+      <!-- Hero Section -->
+      <section aria-label="hero">
+        <div class="hero">
+          <div class="text">
+            <h1 class="hero-heading">Your Justic Is Our Top Priority</h1>
+            <p>
+              As a state of law, maintaining justic is somthing that every
+              citizen mst pay attention to, and we are hare to uphold justice
+              for you
+            </p>
+          </div>
+          <div class="bottom">
+            <div>
+              <img src="./assets/hammer.png" alt="hammer" />
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+  <script>
+    const cart = document.querySelector(".cart");
+    const sidebarMenu = document.querySelector(".list-group");
+    const buttoncontainer = document.querySelector(".button-group");
+    const burgermenu = document.querySelector(".hamburger-menu");
+    buttoncontainer.addEventListener("click", (e) => {
+      burgermenu.classList.toggle("cross-menu");
+      sidebarMenu.classList.toggle("close");
+      cart.classList.toggle("hide-cart");
+    });
+  </script>
+</html>

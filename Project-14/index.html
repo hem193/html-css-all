@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@900&display=swap" rel="stylesheet"> 
+   
+    <link rel="stylesheet" href="./style.css" />
+    <title>HTML-CSS-project-14</title>
+    <script src="https://kit.fontawesome.com/55dbeb11c7.js" crossorigin="anonymous"></script>
+  </head>
+  <body class ="body">
+    <nav>
+      <img src="./image/Logo.svg" alt="" />
+       <div class ="list-items">
+         <ul>
+           <li class="active">Home</li>
+           <li>About US</li>
+           <li>Profolio</li>
+           <li>Contact</li>
+          </ul>
+        </div>
+      <div class="buttoncontainer">
+        <div class ="hamburger-menu "> </div>
+
+       </div>
+    </nav>
+    <div class="left">
+      <img src="./image/pexels-rfstudio-3819572.jpg" alt="" />
+    </div>
+<div class="container">
+
+  <div class="right-side">
+    <div class="head">
+      <h1>Crea -</h1>
+      <div>
+        <h1>tivity.</h1>
+          <p>is our <br> ingredient.</p>
+        </div>
+        <button>
+          Check our Package
+        </button>
+      </div>
+      <div class="top-right">
+        <img src="./image/icon/Twitter Icon.svg" alt="">
+        <img src="./image/icon/Instagram Icon.svg" alt="">
+        <img src="./image/icon/Facebook Icon.svg" alt="">
+        <img src="./image/icon/Email Icon.svg" alt="">
+      </div>
+
+      <div class="bottom">
+        <div class="bottom-left">
+          <!-- <div class="line"></div> -->
+          <ul>
+            <li>Photography</li>
+            <li>Videography</li>
+            <li>Graphics Design</li>
+            <li>Illustration</li>
+            <li>Animation</li>
+          </ul>
+        
+       </div>
+
+       <div class="bottom-right">
+         <h1><i class="fa-solid fa-quote-right"></i></h1>
+         <p>We help you to create the best graphics,<br>
+          photos, videos, animations and illustrations
+        </p>
+        <div class="bottom-right-img">
+          <img src="./image/pexels-cottonbro-7974875.jpg" alt="img">
+        </div>
+        
+      </div>
+      <div class="arrow">
+        <img src="./image/arrow.svg" alt="img">
+      </div>
+    </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+
+<script>
+
+  const topRight = document.querySelector(".top-right")
+  const body = document.querySelector(".body")
+  const sidebarMenu = document.querySelector(".list-items")
+  const buttoncontainer =document.querySelector(".buttoncontainer")
+  const burgermenu = document.querySelector(".hamburger-menu")
+  buttoncontainer.addEventListener('click' , (e)=>{
+    burgermenu.classList.toggle("cross-menu")
+    sidebarMenu.classList.toggle("close")
+    body.classList.toggle("hide-scroll")
+    topRight.classList.toggle("show")
+
+  })
+
+</script>
+
+
+</html>

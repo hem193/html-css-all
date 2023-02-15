@@ -1,0 +1,274 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Roboto;
+}
+body {
+  position: relative;
+  height: 100vh;
+}
+
+body::before {
+  content: "";
+  height: 100vh;
+  width: 49rem;
+  position: absolute;
+  background-image: url("../images/backcover.svg");
+  background-repeat: no-repeat;
+  top: 0px;
+  z-index: -1;
+  background-size: 100%;
+  right: 0;
+}
+.main-div {
+  padding: 37px 100px 0 100px;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+}
+nav > img {
+  cursor: pointer;
+}
+
+.nav-items {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 600px;
+  height: 50px;
+  cursor: pointer;
+}
+.nav-item {
+  font-weight: bold;
+  font-size: medium;
+  color: #3e4794;
+  position: relative;
+}
+
+.nav-item:hover::after {
+  content: "";
+  position: absolute;
+  display: block;
+  bottom: -9px;
+  border-radius: 20px;
+  width: 3rem;
+  height: 4px;
+  background-color: #3e4794;
+}
+
+nav > button {
+  height: 30px;
+  width: 80px;
+  border-radius: 20px;
+  border: none;
+  background: linear-gradient(90deg, #955bf1, #ff89db);
+  color: #fff;
+  cursor: pointer;
+}
+
+nav > button:hover {
+  background: linear-gradient(90deg, #ff89db, #955bf1);
+}
+
+/* intro-section */
+.intro-section {
+  margin-top: 80px;
+  display: flex;
+}
+.left-section {
+  width: 50%;
+  margin: 40px 0 0 0;
+}
+.left-section > h1 {
+  margin: 4px 0 53px 0;
+  font-size: 80px;
+  color: #3d4693;
+}
+
+.left-section > h4 {
+  line-height: 28px;
+  font-weight: unset;
+  color: #0d1348;
+}
+
+.left-section > button {
+  margin: 40px 0 30px 0;
+  height: 40px;
+  width: 150px;
+  border-radius: 20px;
+  border: none;
+  background: linear-gradient(90deg, #955bf1, #ff89db);
+  color: #fff;
+  cursor: pointer;
+}
+
+.left-section > button:hover {
+  background: linear-gradient(90deg, #ff89db, #955bf1);
+}
+
+.imgs-div > img {
+  position: absolute;
+}
+.vector-img {
+  top: 32rem;
+  left: 40rem;
+}
+
+img[alt="intro-img"] {
+  top: 7rem;
+  height: 39rem;
+}
+
+/* .hamburger-menu */
+
+.hamburger-menu::before {
+  position: absolute;
+  content: "";
+  background: black;
+  width: 1.5rem;
+  height: 3px;
+  border-radius: 20px;
+  bottom: 6px;
+  transition: all 0.3s ease;
+}
+
+.hamburger-menu {
+  display: none;
+  background: black;
+  width: 24px;
+  height: 3px;
+  border-radius: 20px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.hamburger-menu::after {
+  position: absolute;
+  content: "";
+  background: black;
+  width: 1.5rem;
+  height: 3px;
+  border-radius: 20px;
+  top: 6px;
+  transition: all 0.3s ease;
+}
+
+.cross-menu::before {
+  bottom: 0px;
+  transform: rotate(45deg);
+  transition: all 0.3s ease;
+}
+
+.cross-menu {
+  background: transparent;
+}
+
+.cross-menu::after {
+  transition: all 0.3s ease;
+  top: 0px;
+  transform: rotate(-45deg);
+}
+
+.buttoncontainer {
+  display: none;
+}
+
+.close {
+  display: none;
+}
+
+@media (max-width: 500px) {
+  body::before {
+    background-size: 120%;
+  }
+
+  img[alt="intro-img"] {
+    display: none;
+  }
+
+  .main-div {
+    padding: 37px 30px 0 30px;
+  }
+
+  nav > img[alt="logo"] {
+    width: 5rem;
+  }
+
+  .nav-items {
+    display: none;
+  }
+
+  .buttoncontainer {
+    height: 2rem;
+    width: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  nav > .signin-btn {
+    display: none;
+  }
+
+  .hamburger-menu {
+    display: block;
+  }
+
+  .vector-img {
+    top: 32rem;
+    left: 0px;
+  }
+
+  .left-section {
+    margin: auto;
+    width: auto;
+    text-align: center;
+  }
+  .left-section > h1 {
+    font-size: 3rem;
+    margin: 30px 0 53px 0;
+  }
+
+  .left-section > h4 {
+    margin: 50px 0;
+  }
+
+  /* sidebarmenu */
+  .close {
+    display: block;
+  }
+
+  .nav-items {
+    background-image: url("../images/backcover.svg");
+    height: 70%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 6rem;
+    line-height: 4;
+    width: 100%;
+    padding-top: 3rem;
+    background-position: center;
+    background-color: white;
+    text-align: center;
+  }
+  .nav-item:hover::after {
+    content: "";
+    display: none;
+  }
+  .signin-btn {
+    display: block;
+    margin: 40px auto;
+    height: 40px;
+    width: 150px;
+    border-radius: 20px;
+    border: none;
+    background: linear-gradient(90deg, #955bf1, #ff89db);
+    color: #fff;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,396 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Orbitron;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 50px;
+  align-items: center;
+}
+
+img[alt="brand-logo"] {
+  height: 50px;
+}
+
+.list {
+  display: flex;
+}
+.list > li {
+  list-style-type: none;
+  margin: 0 20px 0 20px;
+  font-size: 25px;
+  cursor: pointer;
+}
+.list :first-child::after {
+  content: "";
+  display: block;
+  background: black;
+  height: 3px;
+  width: 57px;
+  margin: 2px 10px;
+  border-radius: 25px;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+}
+.search-icon {
+  margin: 9px 10px 0 0;
+}
+
+.search-icon > svg {
+  height: 25px;
+}
+.nav-button {
+  height: 38px;
+  width: 144px;
+  border: solid 2px black;
+  border-radius: 8px;
+  background-color: transparent;
+  letter-spacing: 3px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Poppins;
+  color: #7f7e7e;
+  font-size: 15px;
+  transition: all 0.6s ease;
+}
+
+.nav-button:hover {
+  font-family: Poppins;
+  border: none;
+  color: white;
+  background-color: black;
+}
+
+.square {
+  position: absolute;
+  margin: 50px 0 0 50px;
+}
+
+.square > img {
+  position: absolute;
+  top: 96px;
+  width: 347px;
+  left: 45px;
+  z-index: -1;
+}
+
+.hero-container {
+  display: flex;
+  margin: 100px 50px 0 50px;
+  position: relative;
+}
+
+.hero-container > div > img[alt="person-hero-iamge"] {
+  height: 433px;
+  width: 407px;
+  object-fit: contain;
+}
+
+.hero-container-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+  position: relative;
+}
+
+.hero-heading {
+  font-size: 64px;
+  margin: 40px 0px;
+}
+.hero-description {
+  margin: 30px 0;
+  width: 661px;
+  font-size: 15px;
+  color: #7f7e7e;
+  font-family: Poppins;
+}
+.hero-container-right :nth-child(3) {
+  margin: 45px 0px;
+}
+
+.container-button {
+  margin: 35px;
+}
+
+.star {
+  position: absolute;
+  right: 93px;
+  top: 0px;
+}
+.star > img {
+  height: 37px;
+}
+.globe {
+  position: absolute;
+  left: 50%;
+  top: -42px;
+}
+.globe > img {
+  height: 50px;
+}
+
+.hero-container-right > div > button {
+  cursor: pointer;
+  height: 32px;
+  width: 142px;
+  border-radius: 5px;
+  margin: 0 7px;
+  transition: all 0.6s ease;
+}
+
+.button-email {
+  border: 2px solid;
+  background-color: transparent;
+  color: #7f7e7e;
+  transition: all 0.6s ease;
+}
+
+.button-email:hover {
+  border: none;
+  color: white;
+  background-color: black;
+}
+
+.button-join {
+  border: 2px solid black;
+  background-color: black;
+  color: #ffffff;
+}
+.button-join:hover {
+  background-color: transparent;
+  color: #7f7e7e;
+  transition: all 0.6s ease;
+}
+
+.contact-heading {
+  margin-bottom: 23px;
+  font-family: Poppins;
+  color: #7f7e7e;
+}
+.icons > span > img {
+  height: 37px;
+  margin: 0 7px;
+  cursor: pointer;
+}
+
+.hero-container-right::before {
+  content: "";
+  position: absolute;
+  background-image: url("./assets/start.png");
+  width: 3rem;
+  display: block;
+  height: 4rem;
+  left: 8rem;
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  top: 25rem;
+}
+
+/* Menu  */
+
+.button-group > div:nth-child(2) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hamburger-menu::before {
+  position: absolute;
+  content: "";
+  background: black;
+  width: 1.5rem;
+  height: 3px;
+  border-radius: 20px;
+  bottom: 6px;
+  transition: all 0.3s ease;
+}
+
+.hamburger-menu {
+  display: none;
+  background: black;
+  width: 24px;
+  height: 3px;
+  margin-left: 1rem;
+  border-radius: 20px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.hamburger-menu::after {
+  position: absolute;
+  content: "";
+  background: black;
+  width: 1.5rem;
+  height: 3px;
+  border-radius: 20px;
+  top: 6px;
+  transition: all 0.3s ease;
+}
+
+.cross-menu::before {
+  bottom: 0px;
+  transform: rotate(45deg);
+  transition: all 0.3s ease;
+}
+
+.cross-menu {
+  background: transparent;
+}
+
+.cross-menu::after {
+  transition: all 0.3s ease;
+  top: 0px;
+  transform: rotate(-45deg);
+}
+
+/* @mediaquery  */
+
+@media (max-width: 500px) {
+  .navbar-container {
+    width: 100%;
+    margin: 0;
+    padding: 25px 20px;
+    position: fixed;
+    top: 0;
+    z-index: 5;
+    background-color: white;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+
+  .navbar-container img {
+    width: 90px;
+    height: 30px;
+  }
+
+  .nav-button {
+    display: none;
+  }
+
+  .hamburger-menu {
+    display: block;
+  }
+  .list {
+    display: none;
+  }
+  .hero-container {
+    flex-direction: column;
+    margin: 155px 1rem 20px 1rem;
+    position: relative;
+  }
+
+  .hero-container > div:nth-child(4) {
+    display: flex;
+    justify-content: center;
+  }
+  .hero-container > div:nth-child(4) > img {
+    width: 86%;
+  }
+
+  .globe {
+    position: absolute;
+    left: 10%;
+    top: -50px;
+  }
+  .globe > img {
+    height: 30px;
+  }
+
+  .star {
+    position: absolute;
+    right: 37px;
+    top: -7px;
+  }
+  .star > img {
+    height: 22px;
+  }
+
+  .square {
+    width: 100%;
+    height: 30rem;
+    margin: 0;
+  }
+
+  .square > img {
+    position: absolute;
+    top: 180px;
+    width: 75%;
+    left: 100px;
+    z-index: -1;
+  }
+
+  .hero-description {
+    width: 100%;
+  }
+  .hero-heading {
+    font-size: 30px;
+    margin: 1rem;
+  }
+
+  .hero-container-right {
+    margin-top: 3rem;
+  }
+
+  .hero-container-right :nth-child(3) {
+    margin: 15px 0px 13px 0px;
+  }
+
+  .contact-heading {
+    margin: 30px 0;
+  }
+
+  .hero-container-right::before {
+    content: "";
+    position: absolute;
+    background-image: url("./assets/start.png");
+    width: 2rem;
+    display: block;
+    height: 4rem;
+    left: 17rem;
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    top: 21rem;
+  }
+
+  .icons > span > img {
+    height: 25px;
+    margin: 0 7px;
+    cursor: pointer;
+  }
+  .close {
+    display: none;
+    animation: close 0.5s;
+  }
+
+  .navbar-container > div:nth-child(2) {
+    background-color: white;
+    position: pos;
+    position: fixed;
+    height: 100%;
+    top: 71px;
+    width: 80%;
+    left: 0;
+  }
+
+  .navbar-container > div:nth-child(2) ul {
+    display: block;
+    line-height: 3;
+    margin-top: 3rem;
+    margin-left: 2rem;
+  }
+  .hide-scroll {
+    overflow: hidden;
+  }
+}
